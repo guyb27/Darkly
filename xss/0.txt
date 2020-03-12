@@ -1,0 +1,2 @@
+http://192.168.56.101/?page=feedback
+Faille xss toute simple
