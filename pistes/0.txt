@@ -1,0 +1,6 @@
+Faille de logique je pense:
+    http://192.168.0.10:8080/index.php?page=survey
+
+Bruteforce:
+    http://192.168.0.10:8080/index.php?page=signin
+
