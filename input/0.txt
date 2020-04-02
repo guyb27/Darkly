@@ -1,3 +1,5 @@
 http://192.168.0.10:8080/index.php?page=recover
 
 Juste a passer l'input en text au lieu de hidden, puis changer la size et mettre son adresse mail
+
+FLAG:1d4855f7337c0c14b6f44946872c4eb33853f40b2d54393fbe94f49f1e19bbb0
