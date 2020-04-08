@@ -1,0 +1,6 @@
+http://192.168.0.17:8080/index.php?page=survey
+
+Alors le flag ici est tres simple, il suffit juste de mettre une valeur > 10 dans une des selectbox,
+et ensuite de la selectionner
+
+flag:03a944b434d5baff05f46c4bede5792551a2595574bcafc9a6e25f67c382ccaa
