@@ -1,3 +1,6 @@
+plus d'infos sur:
+http://venom630.free.fr/geo/tutz/securite_informatique/xss/
+
 Ici on est sur une faille xss en get qui doit etre encoder en base64,
 on peut voir que sur la page http://192.168.0.10:8080/index.php
 on a une image qui est cliquable, et qui redirige 
