@@ -4,7 +4,6 @@ One Paragraph of project description goes here
 
 ## Etape 1: detection de la faille sql
 
-### Prerequisites
 
 Dans le formulaire des members, taper la commande suivante:
 ```
@@ -38,7 +37,7 @@ Ce qui nous interresent c'est la table Members_Brute_Force liée avec la table d
 ```
 1 or 1=1 union all select table_name, column_name from information_schema.columns
 ```
-On s'apercoit que la column usernme et password dependent de la table db_default.
+On s'apercoit que la column username et password dependent de la table db_default.
 
 ## Etape 5: EXPLOIT
 
@@ -49,6 +48,28 @@ Le script d'exploit ressemblera alors a:
 
 ```
 root et admin on le meme hash md5: 3bf1114a986ba87ed28fc1b5884fc2f8, il faut decrypter le hash, cela correspond a shadow.
-Il suffit maintenant de se connecter avec root ou admin, on obtient le flag:
-B3A6E43DDF8B4BBB4125E5E7D23040433827759D4DE1C04EA63907479A80A6B2
+Il suffit maintenant de se connecter avec root ou admin.
 
+
+## Comment s'en premunir ?
+
+Utiliser la programmation php PDO et utilisé des requetes préparées. exemple:  
+
+```
+<?php
+
+// On récupère les variables envoyées par le formulaire
+$login = $_POST['login'];
+$password = $_POST['password'];
+
+// Connexion à la BDD en PDO
+try { $bdd = new PDO('mysql:host=localhost;dbname=bdd','root',''); }
+catch (Exeption $e) { die('Erreur : ' .$e->getMessage())  or die(print_r($bdd->errorInfo())); }
+
+// Requête SQL sécurisée
+$req = $bdd->prepare("SELECT * FROM utilisateurs WHERE login= ? AND password= ?");
+$req->execute(array($login, $password));
+
+?>
+
+```
