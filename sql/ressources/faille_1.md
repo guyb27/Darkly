@@ -1,3 +1,7 @@
+# Sql_1
+
+## Detection des failles
+
 http://192.168.0.10:8080/index.php?page=searchimg&id=1%20AND%201=2%20union%20select%20url,%20comment%20from%20list_images&Submit=Submit#
 
 On va s interesser à cette ligne:
@@ -10,4 +14,8 @@ Il est deja en minuscule ...
 
 On le crypte maintenant en md5
 
-FLAG:f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
+
+## Comment s'en premunir
+
+Utiliser un ORM (object-relational mapping) en passant par le serveur,
+afin qu'il envoi les données sous forme de classe
