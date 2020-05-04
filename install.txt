@@ -1,0 +1,11 @@
+sudo apt install virtualenv
+(password:user42)
+virtualenv -p python3 .env
+source .env/bin/activate
+telecharger le binaire geckodriver et le decompresser, puis le placer dans le repertoire bin a la racine de ce projet:
+https://github.com/mozilla/geckodriver/releases
+Ajouter le repertoire bin a la variable PATH
+reset le shell ($ source ~/.zshrc)
+pip3 install -r requirement.txt
+
+Tout les programmes .py pourront se lancer avec python3
