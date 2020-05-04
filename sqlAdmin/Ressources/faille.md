@@ -1,7 +1,5 @@
 # SQL INJECTION ADMIN MEMBERS
 
-One Paragraph of project description goes here
-
 ## Etape 1: detection de la faille sql
 
 
@@ -13,7 +11,6 @@ Cela teste si le formulaire contient une erreur Mysql.
 
 
 ## Etape 2: detection de la version mySql
-Nous savons aue le nombre de colonne est de 2
 Pour connaitre la version de mysql, il suffit de taper la commande suivante:
 ```
 1 or 1=1 union all select 1,convert(@@version using latin1)
